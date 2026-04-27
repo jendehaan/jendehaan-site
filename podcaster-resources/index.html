@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcaster Performance Resources — Jen deHaan</title>
+  <meta name="description" content="Resources about podcasting as a performance and communication discipline.">
+  <link rel="stylesheet" href="../style.css?v=4">
+  <style>
+    
+.pr-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+.pr-wrap * { box-sizing: border-box; }
+.pr-wrap a { color: #E8593C; text-decoration: none; transition: color 0.2s; }
+.pr-wrap a:hover { color: #f06a4e; text-decoration: underline; }
+
+.pr-intro { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid #1e5e6b; }
+.pr-intro p { margin: 0 0 16px; font-size: 18px; line-height: 1.7; color: #aebbc1; }
+.pr-intro p:last-child { margin-bottom: 0; }
+
+.pr-section { margin-bottom: 64px; }
+.pr-section-head { display: flex; align-items: center; gap: 24px; margin-bottom: 16px; }
+.pr-section-head h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; margin: 0; color: transparent; background: linear-gradient(135deg, #fff 0%, #92b5be 100%); -webkit-background-clip: text; }
+.pr-section-rule { flex: 1; height: 1px; background: linear-gradient(90deg, #1e5e6b, transparent); }
+.pr-section-desc { color: #aebbc1; font-size: 16px; line-height: 1.6; max-width: 800px; margin: 0 0 32px; }
+
+.pr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-bottom: 32px; }
+.pr-card { background: #123a43; border: 1px solid #1e5e6b; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+.pr-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.2); border-color: #36a699; }
+
+.pr-thumb { position: relative; width: 100%; padding-top: 56.25%; background: #07181b; cursor: pointer; overflow: hidden; border-bottom: 1px solid #1e5e6b; }
+.pr-thumb img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.2s; }
+.pr-thumb:hover img { opacity: 0.6; }
+.pr-thumb .pr-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; background: rgba(232, 89, 60, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; transition: transform 0.2s, background 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+.pr-thumb:hover .pr-play { transform: translate(-50%, -50%) scale(1.1); background: #E8593C; }
+.pr-thumb .pr-play svg { width: 24px; height: 24px; fill: #fff; margin-left: 4px; }
+.pr-thumb iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+.pr-pod-bar { height: 4px; background: #E8593C; flex-shrink: 0; }
+.pr-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.pr-card-source { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: #92b5be; margin-bottom: 8px; font-weight: 600; }
+.pr-card-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; color: #fff; line-height: 1.35; margin-bottom: 12px; }
+.pr-card-desc { font-size: 15px; color: #aebbc1; line-height: 1.6; flex: 1; margin-bottom: 16px; }
+.pr-card-link { font-size: 14px; font-weight: 600; color: #E8593C; transition: color 0.2s; }
+.pr-card-link:hover { color: #f06a4e; text-decoration: none; }
+
+.pr-cm-ref { border-top: 1px solid #1e5e6b; padding-top: 24px; margin-top: 16px; }
+.pr-cm-ref-label { font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: #92b5be; margin: 0 0 16px; font-weight: 600; }
+.pr-cm-ref-list { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+.pr-cm-ref-list a { font-size: 14px; color: #fff; line-height: 1.5; background: #07181b; padding: 6px 16px; border-radius: 20px; border: 1px solid #1e5e6b; transition: all 0.2s; display: inline-block; }
+.pr-cm-ref-list a:hover { border-color: #E8593C; background: #123a43; text-decoration: none; transform: translateY(-2px); }
+
+.pr-cm-blurb { background: #123a43; border-left: 4px solid #E8593C; padding: 24px; border-radius: 12px; margin-bottom: 32px; max-width: 800px; }
+.pr-cm-blurb p { margin: 0 0 12px; font-size: 16px; color: #e0f2f1; line-height: 1.6; }
+.pr-cm-blurb p:last-child { margin: 0; }
+
+.pr-ep-note { font-size: 15px; color: #92b5be; margin: 0 0 24px; max-width: 640px; }
+.pr-ep-index { column-count: 3; column-gap: 32px; margin-top: 8px; }
+.pr-ep-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; break-inside: avoid; }
+.pr-ep-n { font-size: 13px; color: #E8593C; font-weight: 700; flex-shrink: 0; width: 28px; text-align: right; }
+.pr-ep-t { font-size: 15px; color: #e0f2f1; line-height: 1.4; }
+.pr-ep-t a { color: #e0f2f1; transition: color 0.2s; }
+.pr-ep-t a:hover { color: #E8593C; text-decoration: none; }
+.pr-ep-row.ep-soon .pr-ep-n { color: #1e5e6b; }
+.pr-ep-row.ep-soon .pr-ep-t { color: #92b5be; font-style: italic; }
+
+.pr-foot { font-size: 14px; color: #aebbc1; border-top: 1px solid #1e5e6b; padding-top: 24px; margin-top: 48px; text-align: center; }
+
+@media (max-width: 900px) { .pr-ep-index { column-count: 2; } }
+@media (max-width: 600px) { .pr-grid { grid-template-columns: 1fr; } .pr-wrap { padding: 24px 16px; } .pr-ep-index { column-count: 1; } }
+
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNZRZ79395"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HNZRZ79395');
+  </script>
+</head>
+<body>
+          <nav class="glass-nav" aria-label="Main navigation">
+    <div class="nav-grid">
+      <a href="../index.html" class="nav-name grad-b-sm">Jen deHaan</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="../wired-divergent/index.html">Wired Divergent</a></li>
+        <li><a href="../blog/index.html">Blog</a></li>
+        <li><a href="../products/index.html">Products</a></li>
+
+        <!-- Desktop Dropdown -->
+        <li class="has-dropdown desktop-only">
+          <a style="cursor: default;">About &nbsp;▾</a>
+          <div class="mega-menu">
+            <div class="mega-menu-content">
+              <a href="../about/index.html" class="mega-menu-link">
+                <strong>About Jen</strong>
+                <span class="mega-desc">Background, approach, and credentials.</span>
+              </a>
+              <a href="../contact/index.html" class="mega-menu-link">
+                <strong>Contact</strong>
+                <span class="mega-desc">Get in touch.</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Mobile Flat Links -->
+        <li class="mobile-only"><a href="../about/index.html">About Jen</a></li>
+        <li class="mobile-only"><a href="../contact/index.html">Contact</a></li>
+        <li class="mobile-only mt-2"><a href="../search/index.html">Search</a></li>
+        <li class="mobile-only mt-2"><a href="../newsletters/index.html" class="btn-featured btn-nav-newsletter">Newsletter</a></li>
+      </ul>
+      
+      <div class="nav-actions desktop-only">
+        <form action="../search/index.html" class="nav-search-form" method="get">
+          <input type="search" name="q" class="nav-search-input" placeholder="Search..." aria-label="Search">
+          <svg class="nav-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </form>
+        <a href="../newsletters/index.html" class="btn-featured btn-nav-newsletter">Newsletter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" style="padding-top: 120px;">
+    <div class="container pb-4">
+      <div style="background: rgba(232, 89, 60, 0.1); border-left: 3px solid #E8593C; padding: 1rem; border-radius: 4px; margin-bottom: 2rem; font-size: 0.9rem;">
+        <strong>Note about Local Embeds:</strong> When viewing these videos locally from a file path, YouTube may display an "Error 153 Video Player configuration error". Once the site is uploaded online, the videos will stream perfectly.
+      </div>
+    </div>
+    <div class="pr-wrap">
+      
+  <div class="pr-intro">
+    <h1 class="display" style="margin-bottom: 24px; text-align: center;">Podcaster Performance Resources</h1>
+    <p>These resources are about podcasting as a performance and communication discipline. Learn about how to say things on your show, how you structure shows, and how you show up on mic (and on camera if you're doing video).</p>
+    <p>The material came out of three different shows I made: <strong>Solo Podcasting Handbook</strong> (YouTube), <strong>Podcast Performance Lab</strong> (YouTube & podcast), and <strong>The Credibility Minute</strong> (micro-podcast). I've moved my focus elsewhere since, but wanted to create a single place to come for the archive. Complete episode lists for both podcasts are at the bottom of this page.</p>
+  </div>
+
+  <!-- SECTION 1: Formats, Structure & Information Design -->
+  <div class="pr-section">
+    <div class="pr-section-head">
+      <h2>Formats, Structure &amp; Information Design</h2>
+      <div class="pr-section-rule"></div>
+    </div>
+    <p class="pr-section-desc">What kind of show are you making, and how do you organize what you're saying so people can follow it? These resources cover the structural decisions that happen before you open your mouth.</p>
+    <div class="pr-grid">
+
+      <div class="pr-card">
+          <div class="pr-thumb" onclick="prLoadYT(this,'Dy5b3-cGaNU')">
+          <img src="https://i.ytimg.com/vi/Dy5b3-cGaNU/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">Why Your Storytelling Needs a Clear Point of View</div>
+          <div class="pr-card-desc">Most solo hosts avoid taking a real position. That tends to make episodes harder to follow and easier to forget. This covers why POV matters structurally, not just stylistically.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'xqoOJeDISQg')">
+          <img src="https://i.ytimg.com/vi/xqoOJeDISQg/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">Why Solo Podcasters Avoid Scripts (And Why That's Wrong)</div>
+          <div class="pr-card-desc">The case for scripting: why most solo hosts resist it, what they get wrong about what a script actually is, and how structure frees you up rather than constraining you.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">Solo Podcast Formats Explained: Storyteller, Teacher, Commentator</div>
+          <div class="pr-card-desc">A deeper look at the three main solo formats, such as what each one requires of you as a host and communicator, and how to pick the right one for your content and communication style.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/solo-podcast-formats-explained-storyteller-teacher-commentator/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">My Structured Spontaneity System for Solo Episodes</div>
+          <div class="pr-card-desc">How to plan episodes so they have the clarity of scripted content and the energy of an unscripted conversation. Covers the hybrid approach that avoids the problems of both extremes.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/my-structured-spontaneity-system-for-solo-episodes/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="pr-cm-ref">
+      <p class="pr-cm-ref-label">From The Credibility Minute:</p>
+      <div class="pr-cm-ref-list">
+        <a href="https://minute.captivate.fm/episode/4-how-to-open-an-episode-so-people-actually-stay" target="_blank">Ep 4: How to Open an Episode So People Actually Stay</a>
+        <a href="https://minute.captivate.fm/episode/23-the-neuroscience-of-decision-fatigue-in-podcasting" target="_blank">Ep 23: The Neuroscience of Decision Fatigue in Podcasting</a>
+        <a href="https://minute.captivate.fm/episode/24-specificity-is-generosity-respecting-your-audiences-time" target="_blank">Ep 24: Specificity Is Generosity: Respecting Your Audience's Time</a>
+        <a href="https://minute.captivate.fm/episode/29-why-john-oliver-ditched-interview-segments" target="_blank">Ep 29: Why John Oliver Ditched Interview Segments</a>
+        <a href="https://minute.captivate.fm/episode/40-dont-bury-the-lead-in-your-solo-episode" target="_blank">Ep 40: Don't Bury the Lead in Your Solo Episode</a>
+        <a href="https://minute.captivate.fm/episode/49-the-usefulness-of-in-media-res-for-podcasts" target="_blank">Ep 49: The Usefulness of In Media Res for Podcasts</a>
+        <a href="https://minute.captivate.fm/episode/50-why-concrete-examples-beat-abstract-explanations" target="_blank">Ep 50: Why Concrete Examples Beat Abstract Explanations</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: Solo Podcasting -->
+  <div class="pr-section">
+    <div class="pr-section-head">
+      <h2>Solo Podcasting</h2>
+      <div class="pr-section-rule"></div>
+    </div>
+    <p class="pr-section-desc">The practical side of producing a solo show, such as scripting methods, recording workflow, format choices, and the mindset that makes it sustainable and keeps you consistent (the right kind of consistency to aim for!)</p>
+    <div class="pr-grid">
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'BTtinh0dlqg')">
+          <img src="https://i.ytimg.com/vi/BTtinh0dlqg/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">Which Solo Podcast Format Is Right For You? Storyteller vs. Teacher vs. Commentator</div>
+          <div class="pr-card-desc">The three main solo formats, what each one asks of you as a host, and how to figure out which one fits the way you actually think and communicate.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'_SYDGGY-uxU')">
+          <img src="https://i.ytimg.com/vi/_SYDGGY-uxU/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">Reading Scripts Without Sounding Like You're Reading</div>
+          <div class="pr-card-desc">Techniques for delivering scripted content that sounds like natural speech. The problem is how most people approach reading one. Get reps to get good!</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'N5N1mC56wBg')">
+          <img src="https://i.ytimg.com/vi/N5N1mC56wBg/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">Solo Podcast Sounding Flat? This System Fixes It</div>
+          <div class="pr-card-desc">A systematic approach to identifying where your delivery loses energy and what to do about it. And do so without sounding like you're performing.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">How to Read a Podcast Script Naturally: 4 Methods</div>
+          <div class="pr-card-desc">Four distinct methods for delivering scripted content, when to use each one, and how to train yourself to sound like you're thinking out loud rather than reading.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/how-to-read-a-podcast-script-naturally-4-methods/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">Solo Podcasting Workflow: Voice to Final Script</div>
+          <div class="pr-card-desc">A workflow for moving from initial idea to deliverable script. This is covering how to start from spoken notes rather than written drafts to keep the language conversational.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/solo-podcasting-workflow-voice-to-final-script/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="pr-cm-ref">
+      <p class="pr-cm-ref-label">From The Credibility Minute:</p>
+      <div class="pr-cm-ref-list">
+        <a href="https://minute.captivate.fm/episode/11-shifting-from-interview-shows-to-a-solo-format-but-why" target="_blank">Ep 11: Reasons to Consider a Solo Format Instead of an Interview Show</a>
+        <a href="https://minute.captivate.fm/episode/you-can-script-your-episodes-or-videos-and-not-sound-like-youre-reading" target="_blank">Ep 12: You Can Script Your Episodes and Not Sound Like You're Reading</a>
+        <a href="https://minute.captivate.fm/episode/15-do-you-need-a-video-podcast-or-is-audio-enough" target="_blank">Ep 15: Do You Need a Video Podcast or Is Audio Enough?</a>
+        <a href="https://minute.captivate.fm/episode/16-why-solo-and-scripted-episodes-can-be-easier-and-more-efficient" target="_blank">Ep 16: Why Solo and Scripted Episodes Can Be Easier and More Efficient</a>
+        <a href="https://minute.captivate.fm/episode/17-stop-forcing-yourself-to-think-of-episode-ideas-so-theyll-find-you" target="_blank">Ep 17: Stop Forcing Yourself to Think of Episode Ideas So They'll Find You</a>
+        <a href="https://minute.captivate.fm/episode/18-how-to-go-on-autopilot-so-you-get-creative-ideas-from-default-mode-network" target="_blank">Ep 18: How to Go on Autopilot for Creative Ideas from Default Mode Network</a>
+        <a href="https://minute.captivate.fm/episode/22-how-to-build-a-content-habit-without-burnout" target="_blank">Ep 22: How to Build a Content Habit Without Burnout</a>
+        <a href="https://minute.captivate.fm/episode/27-improvising-isnt-just-winging-it-and-hitting-record" target="_blank">Ep 27: Improvising Isn't Just Winging It and Hitting Record</a>
+        <a href="https://minute.captivate.fm/episode/38-publishing-is-preferable-to-perfection" target="_blank">Ep 38: Publishing Is Preferable to Perfection</a>
+        <a href="https://minute.captivate.fm/episode/43-how-to-yes-and-yourself-in-solo-podcasting" target="_blank">Ep 43: How to "Yes, And" Yourself in Solo Podcasting</a>
+        <a href="https://minute.captivate.fm/episode/46-the-pilot-reframe-for-new-creators" target="_blank">Ep 46: The "Pilot Reframe" for New Creators</a>
+        <a href="https://minute.captivate.fm/episode/48-the-self-editing-mindset-kills-your-flow-when-recording" target="_blank">Ep 48: The Self-Editing Mindset Kills Your Flow When Recording</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Vocal Delivery & Performance -->
+  <div class="pr-section">
+    <div class="pr-section-head">
+      <h2>Vocal Delivery &amp; Performance</h2>
+      <div class="pr-section-rule"></div>
+    </div>
+    <p class="pr-section-desc">How you say things matters as much as what you say. Emotional delivery, speech mechanics, and exercises for your voice.</p>
+    <div class="pr-grid">
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'5aMOvxrkujM')">
+          <img src="https://i.ytimg.com/vi/5aMOvxrkujM/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video + Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">Flat Tone vs. Real Emotion on the Mic: What Listeners Actually Feel</div>
+          <div class="pr-card-desc">Emotional contagion and mirror neurons, which is the neuroscience of why a flat delivery loses your audience even when your content is good. Includes a script analysis drill for injecting genuine emotion. Full transcript available.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/flat-tone-vs-real-emotion-on-the-mic-what-listeners-actually-feel/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'Z6ekXuwbpxk')">
+          <img src="https://i.ytimg.com/vi/Z6ekXuwbpxk/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">How to Calculate Your Speech Speed (to Improve Audience Retention)</div>
+          <div class="pr-card-desc">Speaking rate affects comprehension and attention. How to measure your WPM, what the research says about optimal ranges, and how to adjust for your content type.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'3HK40OxMGno')">
+          <img src="https://i.ytimg.com/vi/3HK40OxMGno/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">Three Exercises for Vocal Advantage in the Era of AI Voices</div>
+          <div class="pr-card-desc">What human vocal delivery does that AI-generated audio can't replicate yet, and three exercises to develop those qualities in your own recording.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">Vocal Delivery for Creators: Practical Drills to Improve Your Sound</div>
+          <div class="pr-card-desc">A set of practical exercises for improving clarity, expressiveness, and authority in your recorded voice. This is drawn from performance training and applied to solo recording contexts.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/vocal-delivery-for-creators-practical-drills-to-improve-your-sound/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="pr-cm-ref">
+      <p class="pr-cm-ref-label">From The Credibility Minute:</p>
+      <div class="pr-cm-ref-list">
+        <a href="https://minute.captivate.fm/episode/why-do-you-hate-the-sound-of-your-own-recorded-voice" target="_blank">Ep 13: Why Do You Hate the Sound of Your Own (Recorded) Voice?</a>
+        <a href="https://minute.captivate.fm/episode/14-a-voice-thats-more-natural-you-might-mean-less-editing" target="_blank">Ep 14: A Voice That's More Natural? You Might Mean Less Editing</a>
+        <a href="https://minute.captivate.fm/episode/25-why-your-listener-can-hear-your-body-language" target="_blank">Ep 25: Why Your Listener Can Hear Your Body Language</a>
+        <a href="https://minute.captivate.fm/episode/31-cognitive-friction-why-hard-to-hear-means-hard-to-believe" target="_blank">Ep 31: Cognitive Friction: Why Hard to Hear Means Hard to Believe</a>
+        <a href="https://minute.captivate.fm/episode/34-the-negative-link-between-big-words-and-credibility" target="_blank">Ep 34: The Negative Link Between Big Words and Credibility</a>
+        <a href="https://minute.captivate.fm/episode/37-why-sounding-natural-is-actually-a-performance" target="_blank">Ep 37: Why Sounding Natural Is Actually a Performance</a>
+        <a href="https://minute.captivate.fm/episode/41-why-your-podcast-needs-musical-dynamics" target="_blank">Ep 41: Why Your Podcast Needs Musical Dynamics</a>
+        <a href="https://minute.captivate.fm/episode/44-a-study-on-the-difference-between-we-and-you-in-scripts" target="_blank">Ep 44: A Study on the Difference Between "We" and "You" in Scripts</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: On-Camera & On-Mic Presence -->
+  <div class="pr-section">
+    <div class="pr-section-head">
+      <h2>On-Camera &amp; On-Mic Presence</h2>
+      <div class="pr-section-rule"></div>
+    </div>
+    <p class="pr-section-desc">Showing up as yourself. Camera confidence, connection, and the psychology of why most people go stiff the moment they hit record.</p>
+    <div class="pr-grid">
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'_AAWKv4Vwdg')">
+          <img src="https://i.ytimg.com/vi/_AAWKv4Vwdg/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video + Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">Your Subconscious Is Shutting Down Your Face on Camera</div>
+          <div class="pr-card-desc">The "dead eyes" phenomenon — your nervous system's social engagement system shutting down when it gets nothing back from the lens. Covers the still face experiment, Stanislavski's circles, and the "Talk to the Face" drill. Full transcript available.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/do-you-have-dead-eyes-on-camera-or-dead-voice-on-the-mic-heres-why-and-a-fix/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'DFYCpbuQa70')">
+          <img src="https://i.ytimg.com/vi/DFYCpbuQa70/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video + Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">The "Red Stapler": How to Be Memorable &amp; Believable</div>
+          <div class="pr-card-desc">Dual coding theory and concreteness fading. This is why specific language sticks in memory far longer than abstract language. Includes the "Zoom In and Focus" drill. Full transcript available.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/the-red-stapler-how-to-be-memorable-believable/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'WBf4mhJwDtw')">
+          <img src="https://i.ytimg.com/vi/WBf4mhJwDtw/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">Building Real Camera Confidence</div>
+          <div class="pr-card-desc">Practical approaches to showing up on camera when social anxiety, shyness, or the general weirdness of filming yourself is getting in the way.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'LixDbzNYRXE')">
+          <img src="https://i.ytimg.com/vi/LixDbzNYRXE/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">On-Camera Charisma WITHOUT Being Fake</div>
+          <div class="pr-card-desc">What charisma actually is as a functional thing, and how to develop it without performing a version of yourself that isn't real. Includes an acting-based exercise.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'x25EuX0r524')">
+          <img src="https://i.ytimg.com/vi/x25EuX0r524/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">Create Your Authentic On-Camera Persona (Step-by-Step)</div>
+          <div class="pr-card-desc">A step-by-step process for building your on-camera presence around who you actually are, rather than who you think you're supposed to be.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'O5F4RFcNoDw')">
+          <img src="https://i.ytimg.com/vi/O5F4RFcNoDw/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">Human vs AI: Why Audiences Still Choose Real Connection</div>
+          <div class="pr-card-desc">What human-produced content does differently and why it still matters for building a lasting audience relationship, even as AI audio and video improves.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">The Four Principles of Natural Charisma for Creators</div>
+          <div class="pr-card-desc">A framework for understanding what "natural charisma" is made of and how to develop it systematically rather than treating it as a personality trait you either have or don't.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/the-four-principles-of-natural-charisma-for-creators/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">Building Trust on the Human Internet While AI Avatars Are Emerging</div>
+          <div class="pr-card-desc">What makes human-made content trustworthy right now. The specific signals of real presence that matter more as AI-generated content becomes widespread.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/building-trust-on-the-human-internet-while-ai-avatars-are-emerging/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">Beyond "Be Yourself": How to Act Natural on Camera or Microphone</div>
+          <div class="pr-card-desc">"Be yourself" is not actionable advice. This ep breaks down what acting natural actually requires technically, and gives you concrete approaches for getting there.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/beyond-be-yourself-how-to-act-natural-on-camera-or-microphone/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">How to Overcome Camera Anxiety: A Step-by-Step Guide</div>
+          <div class="pr-card-desc">A systematic approach to reducing the anxiety response that video triggers. This ep covers the biology, the psychology, and the practical steps to desensitize yourself to the lens.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/how-to-overcome-camera-anxiety-a-step-by-step-guide/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="pr-cm-ref">
+      <p class="pr-cm-ref-label">From The Credibility Minute:</p>
+      <div class="pr-cm-ref-list">
+        <a href="https://minute.captivate.fm/episode/3-why-audio-builds-trust-faster-than-text" target="_blank">Ep 3: Why Audio Builds Trust Faster Than Text</a>
+        <a href="https://minute.captivate.fm/episode/26-the-illusory-truth-effect-why-repetition-builds-belief" target="_blank">Ep 26: The Illusory Truth Effect: Why Repetition Builds Belief</a>
+        <a href="https://minute.captivate.fm/episode/33-the-improv-concept-that-fixes-flat-episodes" target="_blank">Ep 33: The Improv Concept That Fixes Flat Episodes</a>
+        <a href="https://minute.captivate.fm/episode/35-the-one-person-visualization-technique" target="_blank">Ep 35: The One-Person Visualization Technique</a>
+        <a href="https://minute.captivate.fm/episode/36-leaning-into-the-unexpected-happy-accidents" target="_blank">Ep 36: Leaning Into the Unexpected: Happy Accidents</a>
+        <a href="https://minute.captivate.fm/episode/39-the-science-of-joint-attention-in-podcasting" target="_blank">Ep 39: The Science of Joint Attention in Podcasting</a>
+        <a href="https://minute.captivate.fm/episode/42-the-thin-line-between-anxiety-and-excitement-in-the-brain" target="_blank">Ep 42: The Thin Line Between Anxiety and Excitement in the Brain</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Practice Exercises & Performance Mindset -->
+  <div class="pr-section">
+    <div class="pr-section-head">
+      <h2>Practice Exercises &amp; Performance Mindset</h2>
+      <div class="pr-section-rule"></div>
+    </div>
+    <p class="pr-section-desc">Drills you can use immediately, and the psychology behind why most people's instincts about self-editing are working against them.</p>
+    <div class="pr-grid">
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'0nYOLvj_f3E')">
+          <img src="https://i.ytimg.com/vi/0nYOLvj_f3E/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video · Solo Podcasting Handbook</div>
+          <div class="pr-card-title">3 Postural Feedback Exercises for Confidence</div>
+          <div class="pr-card-desc">How body position affects your voice and presence on mic. Three exercises that use posture to shift how you sound and feel when recording.</div>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-thumb" onclick="prLoadYT(this,'pi9xIKjQr-g')">
+          <img src="https://i.ytimg.com/vi/pi9xIKjQr-g/hqdefault.jpg" alt="">
+          <div class="pr-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Video + Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">Why We Cringe at Our Own Voice (and a Solo Drill to Help)</div>
+          <div class="pr-card-desc">The Beautiful Mess Effect, the Pratfall Effect, and the research on why over-editing your voice removes something your audience actually values. Includes a continuous speaking and recovery drill. Full transcript available.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/the-psychology-of-mistakes-and-a-recovery-exercise-drill-to-help-your-episodes/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">The Power Pose Is Dead: 3 Postural Feedback Exercises Instead</div>
+          <div class="pr-card-desc">Why the power pose research didn't replicate, what actually holds up from the body-posture-confidence literature, and three exercises based on the evidence that does exist.</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/the-power-pose-is-dead-3-postural-feedback-exercises-instead/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+      
+      <div class="pr-card">
+        <div class="pr-pod-bar"></div>
+        <div class="pr-card-body">
+          <div class="pr-card-source">Podcast · Podcast Performance Lab</div>
+          <div class="pr-card-title">Three Exercises to Find Your Unique Content Voice</div>
+          <div class="pr-card-desc">Exercises for identifying the specific qualities of how you communicate that are distinctly yours so you can amplify them intentionally rather than flattening them in pursuit of "professionalism."</div>
+          <a class="pr-card-link" href="https://performance.captivate.fm/episode/three-exercises-to-find-your-unique-content-voice/" target="_blank">Show Notes &amp; Transcript →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="pr-cm-ref">
+      <p class="pr-cm-ref-label">From The Credibility Minute:</p>
+      <div class="pr-cm-ref-list">
+        <a href="https://minute.captivate.fm/episode/32-why-commitment-beats-cleverness-every-time" target="_blank">Ep 32: Why Commitment Beats Cleverness Every Time</a>
+        <a href="https://minute.captivate.fm/episode/45-overcoming-the-fear-of-excluding-listeners" target="_blank">Ep 45: Overcoming the Fear of Excluding Listeners</a>
+        <a href="https://minute.captivate.fm/episode/47-the-casino-bar-analogy-for-community-building" target="_blank">Ep 47: The "Casino Bar" Analogy for Community Building</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: Podcast Performance Lab — All Episodes -->
+  <div class="pr-section">
+    <div class="pr-section-head">
+      <h2>Podcast Performance Lab — All Episodes</h2>
+      <div class="pr-section-rule"></div>
+    </div>
+    <p class="pr-section-desc">The full episode list. Each title links to show notes with a full transcript and embedded player. Show page: <a href="https://performance.captivate.fm/podcast-performance-lab/" target="_blank">performance.captivate.fm/podcast-performance-lab</a>.</p>
+
+    <div class="pr-ep-index">
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">1</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/flat-tone-vs-real-emotion-on-the-mic-what-listeners-actually-feel/" target="_blank">Flat Tone vs. Real Emotion on the Mic: What Listeners Actually Feel</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">2</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/the-red-stapler-how-to-be-memorable-believable/" target="_blank">The "Red Stapler": How to Be Memorable &amp; Believable</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">3</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/do-you-have-dead-eyes-on-camera-or-dead-voice-on-the-mic-heres-why-and-a-fix/" target="_blank">Make Your Voice (and Face) Sound and Look More Alive</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">4</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/the-psychology-of-mistakes-and-a-recovery-exercise-drill-to-help-your-episodes/" target="_blank">A Recovery Exercise Drill to Help You Get Used to Hearing Your Voice</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">5</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/solo-podcast-formats-explained-storyteller-teacher-commentator/" target="_blank">Solo Podcast Formats Explained: Storyteller, Teacher, Commentator</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">6</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/my-structured-spontaneity-system-for-solo-episodes/" target="_blank">My Structured Spontaneity System for Solo Episodes</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">7</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/how-to-read-a-podcast-script-naturally-4-methods/" target="_blank">How to Read a Podcast Script Naturally: 4 Methods</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">8</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/solo-podcasting-workflow-voice-to-final-script/" target="_blank">Solo Podcasting Workflow: Voice to Final Script</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">9</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/the-power-pose-is-dead-3-postural-feedback-exercises-instead/" target="_blank">The Power Pose Is Dead: 3 Postural Feedback Exercises Instead</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">10</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/vocal-delivery-for-creators-practical-drills-to-improve-your-sound/" target="_blank">Vocal Delivery for Creators: Practical Drills to Improve Your Sound</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">11</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/three-exercises-to-find-your-unique-content-voice/" target="_blank">Three Exercises to Find Your Unique Content Voice</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">12</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/the-four-principles-of-natural-charisma-for-creators/" target="_blank">The Four Principles of Natural Charisma for Creators</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">13</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/building-trust-on-the-human-internet-while-ai-avatars-are-emerging/" target="_blank">Building Trust on the Human Internet While AI Avatars Are Emerging</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">14</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/beyond-be-yourself-how-to-act-natural-on-camera-or-microphone/" target="_blank">Beyond "Be Yourself": How to Act Natural on Camera or Microphone</a></span>
+      </div>
+      <div class="pr-ep-row">
+        <span class="pr-ep-n">15</span>
+        <span class="pr-ep-t"><a href="https://performance.captivate.fm/episode/how-to-overcome-camera-anxiety-a-step-by-step-guide/" target="_blank">How to Overcome Camera Anxiety: A Step-by-Step Guide</a></span>
+      </div>
+      <div class="pr-ep-row" style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid #1e1e1e;">
+        <span class="pr-ep-n" style="color:#444;">—</span>
+        <span class="pr-ep-t" style="font-style:italic;"><a href="https://performance.captivate.fm/episode/the-solo-podcasting-handbook-trailer/" target="_blank" style="color:#666;">Trailer</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7: The Credibility Minute — All 55 Episodes -->
+  <div class="pr-section">
+    <div class="pr-section-head">
+      <h2>The Credibility Minute — All 55 Episodes</h2>
+      <div class="pr-section-rule"></div>
+    </div>
+    <p class="pr-section-desc">A micro-podcast: one idea per episode, always under 5 minutes. Ran daily on weekdays through April 2026. Topics span performance, communication, content strategy, audience psychology, and building trust online without playing the algorithm game.</p>
+
+    <div class="pr-cm-blurb">
+      <p>Each episode is self-contained. Most people find them stackable, which makes them easy to run through several in one sitting. Every linked title goes to the show notes page, which has a full transcript and embedded player. The complete archive is also at <a href="https://stereoforest.com/minute" target="_blank">stereoforest.com/minute</a> and on all podcast apps.</p>
+    </div>
+
+    <p class="pr-ep-note">Episodes 51–55 publish this week and will be linked when live.</p>
+
+    <div class="pr-ep-index">
+      <div class="pr-ep-row"><span class="pr-ep-n">1</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/1-why-reading-your-blog-out-loud-sounds-bad" target="_blank">Why Reading Your Blog Out Loud Sounds Bad</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">2</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/2-gear-that-actually-matters-for-audio-content" target="_blank">Gear That Actually Matters for Audio Content</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">3</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/3-why-audio-builds-trust-faster-than-text" target="_blank">Why Audio Builds Trust Faster Than Text</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">4</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/4-how-to-open-an-episode-so-people-actually-stay" target="_blank">How to Open an Episode So People Actually Stay</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">5</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/5-giving-your-blog-content-a-second-life" target="_blank">Giving Your Blog Content a Second Life</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">6</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/algorithm-reality-check-for-businesses-and-professionals" target="_blank">Algorithm Reality Check for Businesses and Professionals</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">7</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/7-escaping-the-social-media-content-treadmill-and-maybe-burnout-too" target="_blank">Escaping the Social Media Content Treadmill (and Maybe Burnout Too)</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">8</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/8-building-your-audience-and-leads-in-rented-space" target="_blank">Building Your Audience and Leads in Rented Space</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">9</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/9-what-is-slow-marketing-you-might-want-to-do-it-for-a-good-fit" target="_blank">What Is Slow Marketing? You Might Want to Do It for a Good Fit</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">10</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/10-stepping-back-from-social-media-and-pivoting-to-owned-media" target="_blank">Stepping Back from Social Media and Pivoting to Owned Media</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">11</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/11-shifting-from-interview-shows-to-a-solo-format-but-why" target="_blank">Reasons to Consider a Solo Format Instead of an Interview Show</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">12</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/you-can-script-your-episodes-or-videos-and-not-sound-like-youre-reading" target="_blank">You Can Script Your Episodes and Not Sound Like You're Reading</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">13</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/why-do-you-hate-the-sound-of-your-own-recorded-voice" target="_blank">Why Do You Hate the Sound of Your Own (Recorded) Voice?</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">14</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/14-a-voice-thats-more-natural-you-might-mean-less-editing" target="_blank">A Voice That's More Natural? You Might Mean Less Editing</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">15</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/15-do-you-need-a-video-podcast-or-is-audio-enough" target="_blank">Do You Need a Video Podcast or Is Audio Enough?</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">16</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/16-why-solo-and-scripted-episodes-can-be-easier-and-more-efficient" target="_blank">Why Solo and Scripted Episodes Can Be Easier and More Efficient</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">17</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/17-stop-forcing-yourself-to-think-of-episode-ideas-so-theyll-find-you" target="_blank">Stop Forcing Yourself to Think of Episode Ideas So They'll Find You</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">18</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/18-how-to-go-on-autopilot-so-you-get-creative-ideas-from-default-mode-network" target="_blank">How to Go on Autopilot So You Get Creative Ideas from Default Mode Network</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">19</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/why-a-remote-director-helps-your-video-content-or-podcast-episodes" target="_blank">Why a Remote Director Helps Your Video Content or Podcast Episodes</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">20</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/20-do-you-need-an-editor-or-producer-for-your-podcast" target="_blank">Do You Need an Editor or Producer for Your Podcast?</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">21</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/why-solo-podcasts-need-collaborative-language" target="_blank">Why Solo Podcasts Need Collaborative Language</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">22</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/22-how-to-build-a-content-habit-without-burnout" target="_blank">How to Build a Content Habit Without Burnout</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">23</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/23-the-neuroscience-of-decision-fatigue-in-podcasting" target="_blank">The Neuroscience of Decision Fatigue in Podcasting</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">24</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/24-specificity-is-generosity-respecting-your-audiences-time" target="_blank">Specificity Is Generosity: Respecting Your Audience's Time</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">25</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/25-why-your-listener-can-hear-your-body-language" target="_blank">Why Your Listener Can Hear Your Body Language</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">26</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/26-the-illusory-truth-effect-why-repetition-builds-belief" target="_blank">The Illusory Truth Effect: Why Repetition Builds Belief</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">27</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/27-improvising-isnt-just-winging-it-and-hitting-record" target="_blank">Improvising Isn't Just Winging It and Hitting Record</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">28</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/28-when-to-give-it-away-vs-when-to-charge" target="_blank">When to Give It Away vs. When to Charge</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">29</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/29-why-john-oliver-ditched-interview-segments" target="_blank">Why John Oliver Ditched Interview Segments</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">30</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/30-how-many-times-must-you-repeat-yourself-to-be-believed" target="_blank">How Many Times Must You Repeat Yourself to Be Believed?</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">31</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/31-cognitive-friction-why-hard-to-hear-means-hard-to-believe" target="_blank">Cognitive Friction: Why Hard to Hear Means Hard to Believe</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">32</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/32-why-commitment-beats-cleverness-every-time" target="_blank">Why Commitment Beats Cleverness Every Time</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">33</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/33-the-improv-concept-that-fixes-flat-episodes" target="_blank">The Improv Concept That Fixes Flat Episodes</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">34</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/34-the-negative-link-between-big-words-and-credibility" target="_blank">The Negative Link Between Big Words and Credibility</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">35</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/35-the-one-person-visualization-technique" target="_blank">The One-Person Visualization Technique</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">36</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/36-leaning-into-the-unexpected-happy-accidents" target="_blank">Leaning Into the Unexpected: Happy Accidents</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">37</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/37-why-sounding-natural-is-actually-a-performance" target="_blank">Why Sounding Natural Is Actually a Performance</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">38</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/38-publishing-is-preferable-to-perfection" target="_blank">Publishing Is Preferable to Perfection</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">39</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/39-the-science-of-joint-attention-in-podcasting" target="_blank">The Science of Joint Attention in Podcasting</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">40</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/40-dont-bury-the-lead-in-your-solo-episode" target="_blank">Don't Bury the Lead in Your Solo Episode</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">41</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/41-why-your-podcast-needs-musical-dynamics" target="_blank">Why Your Podcast Needs Musical Dynamics</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">42</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/42-the-thin-line-between-anxiety-and-excitement-in-the-brain" target="_blank">The Thin Line Between Anxiety and Excitement in the Brain</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">43</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/43-how-to-yes-and-yourself-in-solo-podcasting" target="_blank">How to "Yes, And" Yourself in Solo Podcasting</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">44</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/44-a-study-on-the-difference-between-we-and-you-in-scripts" target="_blank">A Study on the Difference Between "We" and "You" in Scripts</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">45</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/45-overcoming-the-fear-of-excluding-listeners" target="_blank">Overcoming the Fear of Excluding Listeners</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">46</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/46-the-pilot-reframe-for-new-creators" target="_blank">The "Pilot Reframe" for New Creators</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">47</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/47-the-casino-bar-analogy-for-community-building" target="_blank">The "Casino Bar" Analogy for Community Building</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">48</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/48-the-self-editing-mindset-kills-your-flow-when-recording" target="_blank">The Self-Editing Mindset Kills Your Flow When Recording</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">49</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/49-the-usefulness-of-in-media-res-for-podcasts" target="_blank">The Usefulness of In Media Res for Podcasts</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">50</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/50-why-concrete-examples-beat-abstract-explanations" target="_blank">Why Concrete Examples Beat Abstract Explanations</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">51</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/51-your-imaginary-audience-is-holding-your-solo-podcasting-back" target="_blank">Your Imaginary Audience is Holding Your Solo Podcasting Back</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">52</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/52-why-you-need-a-pile-of-cold-pancakes-in-your-story-to-resonate" target="_blank">Why You Need a Pile of Cold Pancakes in Your Story to Resonate</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">53</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/53-treating-your-listener-like-a-co-worker-vocally-at-least" target="_blank">Treating Your Listener Like a Co-worker (Vocally, At Least)</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">54</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/54-the-jam-study-a-lesson-in-listener-psychology" target="_blank">The Jam Study: A Lesson in Listener Psychology</a></span></div>
+      <div class="pr-ep-row"><span class="pr-ep-n">55</span><span class="pr-ep-t"><a href="https://minute.captivate.fm/episode/55-when-more-options-are-actually-good-in-your-episode" target="_blank">When More Options Are Actually Good in Your Episode</a></span></div>
+      <div class="pr-ep-row" style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid #1e1e1e;">
+        <span class="pr-ep-n" style="color:#444;">—</span>
+        <span class="pr-ep-t" style="font-style:italic;"><a href="https://minute.captivate.fm/episode/welcome-to-the-credibility-minute-a-new-micro-podcast" target="_blank" style="color:#666;">Trailer: Welcome to the Credibility Minute</a></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pr-foot">
+    <p>Content originally produced for <a href="https://performance.captivate.fm/podcast-performance-lab/" target="_blank">Podcast Performance Lab</a>, Solo Podcasting Handbook, and <a href="https://stereoforest.com/minute" target="_blank">The Credibility Minute</a> — all StereoForest productions.</p>
+  </div>
+
+
+    </div>
+  </main>
+
+    <footer class="site-footer" style="margin-top: 40px; padding: 40px 0; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+    <div class="container footer-container">
+      <div class="footer-left">
+        &copy; 2026 Jen deHaan<br>
+        <span class="footer-subtext">All rights reserved · Made and hosted in Canada.</span>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-links" style="list-style: none; display: flex; gap: 1rem;">
+          <li><a href="../privacy-policy/index.html">Privacy</a></li>
+          <li><a href="../contact/index.html">Contact</a></li>
+          <li><a href="../feed.xml">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle && links) {
+      toggle.addEventListener('click', () => {
+        const open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+      });
+    }
+
+    function prLoadYT(el, id) {
+      var iframe = document.createElement('iframe');
+      // Added origin parameter to help mitigate error 153 when deployed
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&origin=https://jendehaan.com';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      el.innerHTML = '';
+      el.appendChild(iframe);
+    }
+  </script>
+
+  <!-- Osano Cookie Consent -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#0d2a30",
+        "text": "#aebbc1"
+      },
+      "button": {
+        "background": "#E8593C",
+        "text": "#ffffff"
+      }
+    },
+    "theme": "classic",
+    "position": "bottom-right",
+    "content": {
+      "href": "https://jendehaan.com/privacy-policy/"
+    }
+  })});
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found — Jen deHaan</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Head back to jendehaan.com.">
+  <link rel="stylesheet" href="/style.css?v=4">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNZRZ79395"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HNZRZ79395');
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="top-rule"></div>
+
+  <!-- Nav -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="nav-name grad-b-sm">Jen deHaan</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/wired-divergent/">Wired Divergent</a></li>
+        <li><a href="/youtube/">YouTube</a></li>
+        <li><a href="/podcaster-resources/">Resources</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/newsletters/">Newsletter</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main id="main">
+    <section class="section" style="display: flex; align-items: center; justify-content: center; min-height: 60vh; flex-direction: column; text-align: center;">
+      <div class="container" style="max-width: none;">
+        <h1 class="display grad-b" style="font-size: 48px; margin-bottom: 24px;">404</h1>
+        <p style="color: #999; margin-bottom: 32px; font-size: 16px; max-width: 400px; margin-left: auto; margin-right: auto;">This page doesn't exist, but you do, and that's what matters.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+          <a href="/" class="btn-primary">Go home</a>
+          <a href="/blog/" class="btn-secondary">Read the blog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="container"><hr class="gradient-rule-bottom"></div>
+
+  <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 40px; padding: 40px 0; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+    <div class="container footer-container">
+      <div class="footer-left">
+        &copy; 2026 Jen deHaan<br>
+        <span class="footer-subtext">All rights reserved · Made and hosted in Canada.</span>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-links" style="list-style: none; display: flex; gap: 1rem;">
+          <li><a href="/privacy-policy/">Privacy</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle && links) {
+      toggle.addEventListener('click', () => {
+        const open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+      });
+    }
+  </script>
+
+  <!-- Osano Cookie Consent -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#0d2a30",
+        "text": "#aebbc1"
+      },
+      "button": {
+        "background": "#E8593C",
+        "text": "#ffffff"
+      }
+    },
+    "theme": "classic",
+    "position": "bottom-right",
+    "content": {
+      "href": "https://jendehaan.com/privacy-policy/"
+    }
+  })});
+  </script>
+</body>
+</html>

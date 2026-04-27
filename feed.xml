@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Jen deHaan</title>
+    <link>https://jendehaan.com</link>
+    <description>Blog posts on neurodivergence, nervous system regulation, improv, and performance by Jen deHaan.</description>
+    <language>en-CA</language>
+    <lastBuildDate>Thu, 10 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jendehaan.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>This Is a Sample Blog Post</title>
+      <link>https://jendehaan.com/blog/functional-freeze-vs-adhd-paralysis/</link>
+      <guid isPermaLink="true">https://jendehaan.com/blog/functional-freeze-vs-adhd-paralysis/</guid>
+      <pubDate>Thu, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <description>A reference implementation showing every element available in the blog post template.</description>
+      <dc:creator>Jen deHaan</dc:creator>
+    </item>
+  </channel>
+</rss>

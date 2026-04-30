@@ -77,6 +77,7 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </form>
+          <div id="newsletter-success" class="kit-success" style="display: none; padding-top: 16px; color: #fff; font-weight: bold; text-align: center;">Thanks for subscribing! Please check your inbox to confirm.</div>
         <a href="../newsletters/index.html" class="btn-featured btn-nav-newsletter">Newsletter</a>
       </div>
     </div>
@@ -98,10 +99,11 @@
         <div class="kit-form" style="margin: 0; padding: 56px 40px 40px 40px; background: #123a43; border-radius: 16px; border: 2px solid #E8593C; box-shadow: 0 12px 40px rgba(0,0,0,0.2);">
           <h2 style="margin-top: 0; margin-bottom: 16px;">Wired Divergent Newsletter</h2>
           <p style="margin-bottom: 24px; color: #aebbc1;">Nervous system regulation for neurodivergent brains. Get the deep dives, resources, and show updates.</p>
-          <form action="https://app.kit.com/forms/9075050/subscriptions" method="post" data-uid="be7510d98c">
+          <form action="https://app.kit.com/forms/9075050/subscriptions" method="post" data-uid="be7510d98c" id="newsletter-form">
             <input type="email" name="email_address" placeholder="Your Email Address" required style="width: 100%; padding: 16px; border-radius: 8px; border: 1px solid #1e5e6b; background: #0d2a30; color: #fff; font-size: 16px; margin-bottom: 16px; box-sizing: border-box;">
             <button type="submit" class="btn-featured" style="width: 100%; padding: 16px; font-size: 16px; box-sizing: border-box;">Subscribe</button>
           </form>
+          <div id="newsletter-success" class="kit-success" style="display: none; padding-top: 16px; color: #fff; font-weight: bold; text-align: center;">Thanks for subscribing! Please check your inbox to confirm.</div>
           <p class="kit-powered" style="margin-top: 16px; text-align: center;">We won't send you spam. Unsubscribe at any time.</p>
         </div>
       </div>
@@ -165,6 +167,35 @@
       });
     }
   </script>
+
+  <script>
+    // Ajax Newsletter Form
+    const nForm = document.getElementById('newsletter-form');
+    const nSuccess = document.getElementById('newsletter-success');
+    if (nForm) {
+      nForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const btn = nForm.querySelector('button[type="submit"]');
+        const ogText = btn.textContent;
+        btn.textContent = 'Wait...';
+        btn.disabled = true;
+
+        fetch(nForm.action, {
+          method: 'POST',
+          body: new FormData(nForm),
+          mode: 'no-cors'
+        })
+          .then(() => {
+            nForm.style.display = 'none';
+            nSuccess.style.display = 'block';
+          })
+          .catch(err => {
+            console.warn('Background submission blocked (likely by privacy settings). Falling back to native submit.', err);
+            nForm.submit();
+          });
+      });
+    }
+</script>
 
   <!-- Osano Cookie Consent -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

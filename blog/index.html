@@ -116,7 +116,17 @@
         <div class="newsletter-cta">
           <h3>Stay in the loop</h3>
           <p>Neurodivergence, nervous system regulation, and the occasional behind-the-scenes look at building this whole thing. No spam, no wellness fluff.</p>
-          <a href="../newsletters/index.html" class="btn-featured">Subscribe</a>
+                    <div class="kit-form">
+            <form action="https://app.kit.com/forms/9075050/subscriptions" method="post" data-uid="be7510d98c"
+              id="newsletter-form">
+              <input type="email" name="email_address" placeholder="Your email address" required>
+              <button type="submit" class="btn-featured">Subscribe</button>
+            </form>
+            <div id="newsletter-success" class="kit-success" style="display: none;">
+              Thanks for subscribing! Please check your inbox to confirm.
+            </div>
+            <p class="kit-powered">We won't send you spam. Unsubscribe at any time.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -156,6 +166,35 @@
       });
     }
   </script>
+
+  <script>
+    // Ajax Newsletter Form
+    const nForm = document.getElementById('newsletter-form');
+    const nSuccess = document.getElementById('newsletter-success');
+    if (nForm) {
+      nForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const btn = nForm.querySelector('button[type="submit"]');
+        const ogText = btn.textContent;
+        btn.textContent = 'Wait...';
+        btn.disabled = true;
+
+        fetch(nForm.action, {
+          method: 'POST',
+          body: new FormData(nForm),
+          mode: 'no-cors'
+        })
+          .then(() => {
+            nForm.style.display = 'none';
+            nSuccess.style.display = 'block';
+          })
+          .catch(err => {
+            console.warn('Background submission blocked (likely by privacy settings). Falling back to native submit.', err);
+            nForm.submit();
+          });
+      });
+    }
+</script>
 
   <!-- Osano Cookie Consent -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
